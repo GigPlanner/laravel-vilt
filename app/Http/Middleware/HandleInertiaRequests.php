@@ -42,27 +42,6 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
-
-            'model' => new PostsViewModel('Foo bar', [
-                new PostData(
-                    'Test post',
-                    'This is the content of a test post.',
-                    PostStatus::Draft,
-                    CarbonImmutable::now()->subWeek(),
-                ),
-                new PostData(
-                    'Test post',
-                    'This is the content of a test post.',
-                    PostStatus::Draft,
-                    CarbonImmutable::now()->subWeek(),
-                ),
-                new PostData(
-                    'Test post',
-                    'This is the content of a test post.',
-                    PostStatus::Draft,
-                    CarbonImmutable::now()->subWeek(),
-                ),
-            ]),
         ]);
     }
 }
