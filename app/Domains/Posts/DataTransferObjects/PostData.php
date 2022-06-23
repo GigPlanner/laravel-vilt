@@ -13,7 +13,7 @@ class PostData extends Data
         public string $title,
         public string $content,
         public PostStatus $status,
-        public ?CarbonImmutable $published_at
+        public ?CarbonImmutable $published_at,
     ) {
     }
 }

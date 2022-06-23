@@ -15,7 +15,7 @@ use Tightenco\Ziggy\Ziggy;
 |
 */
 
-Route::get('routes', fn () => response()->json(new Ziggy));
+Route::get('routes', fn() => response()->json(new Ziggy()));
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

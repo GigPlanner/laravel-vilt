@@ -8,9 +8,8 @@ use Spatie\ViewModels\ViewModel;
 /** @typescript */
 class MenuViewModel extends ViewModel
 {
-    public function __construct(
-        array $items,
-    ) {
+    public function __construct(array $items)
+    {
         $this->items = $items;
     }
 

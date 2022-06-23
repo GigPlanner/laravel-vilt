@@ -8,6 +8,7 @@ class Link
     public function __construct(
         public readonly string $url,
         public readonly bool $isExternal = false,
-        public readonly bool $isInertia = true
-    ) {}
+        public readonly bool $isInertia = true,
+    ) {
+    }
 }

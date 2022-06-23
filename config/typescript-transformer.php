@@ -6,9 +6,7 @@ return [
      * to transform, this will be the `app` path by default.
      */
 
-    'auto_discover_types' => [
-        app_path()
-    ],
+    'auto_discover_types' => [app_path()],
 
     /*
      * Collectors will search for classes in the `auto_discover_types` paths and choose the correct
@@ -16,9 +14,7 @@ return [
      * for @typescript annotated and ![TypeScript] attributed classes to transform.
      */
 
-    'collectors' => [
-        Spatie\TypeScriptTransformer\Collectors\DefaultCollector::class,
-    ],
+    'collectors' => [Spatie\TypeScriptTransformer\Collectors\DefaultCollector::class],
 
     /*
      * Transformers take PHP classes(e.g., enums) as an input and will output
