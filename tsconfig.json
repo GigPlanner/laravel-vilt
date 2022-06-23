@@ -12,7 +12,7 @@
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["resources/*"]
+      "@/*": ["resources/js/*"]
     }
   },
   "include": ["resources/**/*"]

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
 import { Head } from '@inertiajs/inertia-vue3'
 
 import PostsViewModel = Domains.Posts.ViewModels.PostsViewModel
+import Authenticated from '@/Layouts/Authenticated.vue'
 
 const props = defineProps<{
   versions: {
@@ -18,7 +18,7 @@ const props = defineProps<{
     <title>Dashboard</title>
   </Head>
 
-  <BreezeAuthenticatedLayout>
+  <Authenticated>
     <template #header>
       <h2 class="text-xl font-semibold leading-tight text-gray-800">Dashboard</h2>
     </template>
@@ -40,5 +40,5 @@ const props = defineProps<{
         </div>
       </div>
     </div>
-  </BreezeAuthenticatedLayout>
+  </Authenticated>
 </template>
