@@ -2,6 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use Carbon\CarbonImmutable;
+use Domains\Posts\DataTransferObjects\PostData;
+use Domains\Posts\Values\PostStatus;
+use Domains\Posts\ViewModels\PostsViewModel;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
@@ -38,9 +42,27 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
-            'ziggy' => function () {
-                return (new Ziggy)->toArray();
-            },
+
+            'model' => new PostsViewModel('Foo bar', [
+                new PostData(
+                    'Test post',
+                    'This is the content of a test post.',
+                    PostStatus::Draft,
+                    CarbonImmutable::now()->subWeek(),
+                ),
+                new PostData(
+                    'Test post',
+                    'This is the content of a test post.',
+                    PostStatus::Draft,
+                    CarbonImmutable::now()->subWeek(),
+                ),
+                new PostData(
+                    'Test post',
+                    'This is the content of a test post.',
+                    PostStatus::Draft,
+                    CarbonImmutable::now()->subWeek(),
+                ),
+            ]),
         ]);
     }
 }
