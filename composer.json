@@ -9,9 +9,10 @@
   "license": "MIT",
   "require": {
     "php": "^8.1",
+    "based/momentum-modal": "^0.1.4",
     "guzzlehttp/guzzle": "^7.2",
-    "inertiajs/inertia-laravel": "^0.5.4",
-    "laravel/framework": "9.x-dev",
+    "inertiajs/inertia-laravel": "^0.6.3",
+    "laravel/framework": "^v9.19.0",
     "laravel/sanctum": "^2.8",
     "laravel/tinker": "^2.7",
     "spatie/laravel-data": "^1.5",

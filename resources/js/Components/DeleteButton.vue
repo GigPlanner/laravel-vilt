@@ -8,6 +8,10 @@ const doDelete = () => {
   confirmationDialog.value?.showModal()
 }
 
+const close = () => {
+  confirmationDialog.value?.close()
+}
+
 const closed = () => {
   if (confirmationDialog.value.returnValue !== 'confirm') {
     return
@@ -18,16 +22,13 @@ const closed = () => {
 </script>
 
 <template>
-  <button
-    type="button"
-    class="ml-2 hidden text-red-500 hover:text-red-800 group-hover:inline-block"
-    @click="doDelete()"
-  >
+  <button type="button" class="ml-2 text-red-500 hover:text-red-800" @click="doDelete()">
     <slot>Delete</slot>
   </button>
   <dialog
     ref="confirmationDialog"
     @keydown.enter="confirm"
+    @keydown.esc.prevent="close()"
     class="rounded-xl p-6 backdrop-blur-2xl backdrop:bg-gray-400/75"
     @close="closed"
   >

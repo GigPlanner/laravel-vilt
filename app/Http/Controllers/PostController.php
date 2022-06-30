@@ -7,6 +7,7 @@ use Domains\Posts\DataTransferObjects\PostCreationData;
 use Domains\Posts\DataTransferObjects\PostData;
 use Domains\Posts\ViewModels\PostsViewModel;
 use Illuminate\Http\RedirectResponse;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
@@ -37,6 +38,11 @@ class PostController extends Controller
             ->create($creationData->all());
 
         return redirect()->route('posts.index');
+    }
+
+    public function edit()
+    {
+        return Inertia::modal('Post/Edit')->baseRoute('posts.index');
     }
 
     public function destroy(Post $post): RedirectResponse

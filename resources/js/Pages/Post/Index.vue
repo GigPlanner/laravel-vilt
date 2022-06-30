@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import PostsViewModel = Domains.Posts.ViewModels.PostsViewModel
 import Authenticated from '@/Layouts/Authenticated.vue'
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm, Link } from '@inertiajs/inertia-vue3'
 import { Inertia } from '@inertiajs/inertia'
 import DeleteButton from '@/Components/DeleteButton.vue'
 
@@ -51,7 +51,16 @@ const resetCreateForm = () => {
       <ul class="flex list-disc flex-col" v-if="model.posts.length > 0">
         <li v-for="post in model.posts" class="group">
           <strong>{{ post.title }}</strong> by {{ post.user.name }}
-          <delete-button @delete="deletePost(post.id)"> Delete post </delete-button>
+          <span class="hidden group-hover:inline-flex">
+            <Link
+              preserve-scroll
+              :href="route('posts.edit', { post: post.id })"
+              class="text-indigo-500"
+            >
+              Edit post
+            </Link>
+            <delete-button @delete="deletePost(post.id)"> Delete post </delete-button>
+          </span>
         </li>
       </ul>
       <div>
