@@ -11,6 +11,7 @@ content: string;
 publishedAt: any | null;
 };
 export type UserData = {
+id: number;
 name: string;
 };
 }

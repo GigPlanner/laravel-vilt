@@ -24,7 +24,17 @@ Route::get('/', function () {
     ]);
 });
 
-Route::resource('posts', \App\Http\Controllers\PostController::class);
+Route::get('posts/{user?}', [\App\Http\Controllers\PostController::class, 'index'])->name(
+    'posts.index',
+);
+
+Route::get('posts/{post}/edit', [\App\Http\Controllers\PostController::class, 'edit'])->name(
+    'posts.edit',
+);
+
+Route::delete('posts/{post}', [\App\Http\Controllers\PostController::class, 'destroy'])->name(
+    'posts.destroy',
+);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

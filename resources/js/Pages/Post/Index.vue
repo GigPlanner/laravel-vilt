@@ -50,7 +50,14 @@ const resetCreateForm = () => {
     <div class="mx-auto max-w-7xl flex-col space-y-8 py-12 sm:px-6 lg:px-8">
       <ul class="flex list-disc flex-col" v-if="model.posts.length > 0">
         <li v-for="post in model.posts" class="group">
-          <strong>{{ post.title }}</strong> by {{ post.user.name }}
+          <strong>{{ post.title }}</strong> by
+          <Link
+            preserve-scroll
+            :href="route('posts.index', { user: post.user.id })"
+            class="mr-6 text-indigo-500"
+          >
+            {{ post.user.name }}
+          </Link>
           <span class="hidden group-hover:inline-flex">
             <Link
               preserve-scroll
