@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, ref } from 'vue'
+import { computed, ref } from 'vue'
 import PostsViewModel = Domains.Posts.ViewModels.PostsViewModel
 import Authenticated from '@/Layouts/Authenticated.vue'
 import { useForm } from '@inertiajs/inertia-vue3'

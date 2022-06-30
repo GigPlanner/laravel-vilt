@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/inertia-vue3'
 
-import PostsViewModel = Domains.Posts.ViewModels.PostsViewModel
 import Authenticated from '@/Layouts/Authenticated.vue'
-
-const props = defineProps<{
-  versions: {
-    php: string
-    laravel: string
-  }
-}>()
 </script>
 
 <template>
