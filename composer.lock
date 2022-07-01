@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "based/momentum-modal",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lepikhinb/momentum-modal.git",
-                "reference": "d346e54a40e22f74c850e2565d08b4434f5fa014"
+                "reference": "c6228929286a0eb1f5aa65190d846c99357314ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lepikhinb/momentum-modal/zipball/d346e54a40e22f74c850e2565d08b4434f5fa014",
-                "reference": "d346e54a40e22f74c850e2565d08b4434f5fa014",
+                "url": "https://api.github.com/repos/lepikhinb/momentum-modal/zipball/c6228929286a0eb1f5aa65190d846c99357314ac",
+                "reference": "c6228929286a0eb1f5aa65190d846c99357314ac",
                 "shasum": ""
             },
             "require": {
@@ -59,9 +59,9 @@
             "description": "Build dynamic modal dialogs for your Inertia-powered Laravel apps",
             "support": {
                 "issues": "https://github.com/lepikhinb/momentum-modal/issues",
-                "source": "https://github.com/lepikhinb/momentum-modal/tree/v0.1.4"
+                "source": "https://github.com/lepikhinb/momentum-modal/tree/v0.1.5"
             },
-            "time": "2022-06-29T21:06:29+00:00"
+            "time": "2022-07-01T04:20:51+00:00"
         },
         {
             "name": "brick/math",
